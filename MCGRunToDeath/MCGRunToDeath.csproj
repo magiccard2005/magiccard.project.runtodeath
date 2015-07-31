@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">ARM</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72778D87-238A-4F25-AD7F-10098E8377EB}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MCGRunToDeath</RootNamespace>
+    <AssemblyName>MCGRunToDeath</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>vi-VN</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>MCG Run To Death.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>MCGRunToDeath.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsPhone8\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsPhone8\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsPhone8\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsPhone8\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CacTrang\TGioiThieu.cs" />
+    <Compile Include="CacTrang\TNapDuLieu.cs" />
+    <Compile Include="CacTrang\TTroChoi.cs" />
+    <Compile Include="GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HieuUng\HUDanChim.cs" />
+    <Compile Include="HieuUng\HUMayTroi.cs" />
+    <Compile Include="HieuUng\HUSamSet.cs" />
+    <Compile Include="MBangThongBao.cs" />
+    <Compile Include="MChayAnhDong.cs" />
+    <Compile Include="MChayAnhThuong.cs" />
+    <Compile Include="MChuoiKyTuAnh.cs" />
+    <Compile Include="MGioiThieuHang.cs" />
+    <Compile Include="MHieuUngSangToi.cs" />
+    <Compile Include="MKhungCuaSo.cs" />
+    <Compile Include="MLuuLayDuLieu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RunToDeath.cs" />
+    <Compile Include="TPBoChu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="GamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\AmThanh\AmChay.xnb" />
+    <Content Include="Content\AmThanh\AmChet.xnb" />
+    <Content Include="Content\AmThanh\AmChon.xnb" />
+    <Content Include="Content\AmThanh\AmLuaChay.xnb" />
+    <Content Include="Content\AmThanh\AmNen.xnb" />
+    <Content Include="Content\AmThanh\AmNhay.xnb" />
+    <Content Include="Content\AmThanh\AmSamSet01.xnb" />
+    <Content Include="Content\AmThanh\AmSamSet02.xnb" />
+    <Content Include="Content\AmThanh\AmSamSet03.xnb" />
+    <Content Include="Content\HinhAnh\AnhAmThanh.xnb" />
+    <Content Include="Content\HinhAnh\BangThongBao\NBTCancel.xnb" />
+    <Content Include="Content\HinhAnh\BangThongBao\NBTDuoc.xnb" />
+    <Content Include="Content\HinhAnh\BangThongBao\NBTHuy.xnb" />
+    <Content Include="Content\HinhAnh\BangThongBao\NBTOK.xnb" />
+    <Content Include="Content\HinhAnh\BangThongBao\NenBangThongBao.xnb" />
+    <Content Include="Content\HinhAnh\BangThongBao\NKHCancel.xnb" />
+    <Content Include="Content\HinhAnh\BangThongBao\NKHDuoc.xnb" />
+    <Content Include="Content\HinhAnh\BangThongBao\NKHHuy.xnb" />
+    <Content Include="Content\HinhAnh\BangThongBao\NKHOK.xnb" />
+    <Content Include="Content\HinhAnh\BauTroiSao.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\1.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\10.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\100.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\101.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\102.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\103.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\104.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\105.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\106.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\107.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\108.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\109.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\11.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\110.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\111.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\112.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\113.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\114.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\115.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\116.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\117.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\118.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\119.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\12.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\120.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\121.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\122.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\123.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\124.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\125.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\126.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\127.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\128.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\129.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\13.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\130.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\131.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\132.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\133.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\134.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\135.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\136.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\137.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\138.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\139.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\14.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\140.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\141.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\142.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\143.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\144.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\145.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\146.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\147.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\148.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\149.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\15.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\150.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\151.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\152.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\153.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\154.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\155.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\156.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\157.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\158.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\159.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\16.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\160.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\161.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\162.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\163.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\164.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\165.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\166.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\167.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\168.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\169.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\17.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\170.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\171.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\172.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\173.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\174.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\175.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\176.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\177.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\178.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\179.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\18.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\180.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\181.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\182.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\183.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\184.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\185.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\186.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\187.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\188.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\189.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\19.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\190.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\191.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\192.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\193.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\194.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\195.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\196.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\197.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\198.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\199.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\2.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\20.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\200.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\201.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\202.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\203.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\204.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\205.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\206.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\207.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\208.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\209.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\21.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\210.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\211.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\212.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\213.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\214.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\215.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\216.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\217.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\218.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\219.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\22.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\220.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\221.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\222.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\223.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\224.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\225.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\23.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\24.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\25.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\26.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\27.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\28.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\29.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\3.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\30.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\31.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\32.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\33.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\34.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\35.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\36.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\37.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\38.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\39.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\4.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\40.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\41.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\42.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\43.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\44.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\45.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\46.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\47.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\48.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\49.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\5.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\50.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\51.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\52.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\53.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\54.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\55.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\56.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\57.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\58.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\59.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\6.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\60.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\61.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\62.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\63.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\64.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\65.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\66.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\67.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\68.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\69.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\7.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\70.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\71.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\72.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\73.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\74.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\75.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\76.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\77.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\78.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\79.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\8.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\80.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\81.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\82.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\83.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\84.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\85.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\86.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\87.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\88.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\89.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\9.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\90.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\91.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\92.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\93.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\94.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\95.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\96.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\97.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\98.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS20None\99.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\1.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\10.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\100.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\101.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\102.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\103.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\104.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\105.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\106.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\107.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\108.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\109.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\11.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\110.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\111.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\112.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\113.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\114.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\115.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\116.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\117.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\118.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\119.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\12.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\120.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\121.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\122.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\123.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\124.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\125.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\126.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\127.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\128.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\129.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\13.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\130.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\131.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\132.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\133.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\134.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\135.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\136.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\137.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\138.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\139.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\14.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\140.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\141.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\142.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\143.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\144.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\145.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\146.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\147.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\148.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\149.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\15.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\150.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\151.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\152.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\153.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\154.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\155.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\156.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\157.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\158.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\159.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\16.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\160.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\161.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\162.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\163.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\164.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\165.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\166.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\167.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\168.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\169.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\17.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\170.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\171.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\172.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\173.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\174.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\175.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\176.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\177.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\178.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\179.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\18.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\180.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\181.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\182.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\183.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\184.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\185.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\186.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\187.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\188.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\189.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\19.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\190.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\191.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\192.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\193.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\194.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\195.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\196.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\197.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\198.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\199.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\2.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\20.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\200.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\201.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\202.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\203.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\204.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\205.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\206.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\207.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\208.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\209.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\21.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\210.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\211.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\212.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\213.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\214.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\215.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\216.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\217.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\218.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\219.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\22.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\220.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\221.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\222.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\223.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\224.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\225.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\23.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\24.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\25.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\26.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\27.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\28.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\29.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\3.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\30.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\31.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\32.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\33.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\34.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\35.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\36.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\37.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\38.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\39.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\4.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\40.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\41.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\42.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\43.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\44.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\45.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\46.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\47.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\48.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\49.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\5.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\50.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\51.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\52.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\53.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\54.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\55.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\56.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\57.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\58.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\59.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\6.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\60.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\61.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\62.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\63.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\64.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\65.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\66.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\67.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\68.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\69.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\7.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\70.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\71.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\72.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\73.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\74.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\75.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\76.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\77.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\78.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\79.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\8.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\80.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\81.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\82.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\83.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\84.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\85.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\86.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\87.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\88.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\89.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\9.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\90.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\91.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\92.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\93.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\94.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\95.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\96.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\97.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\98.xnb" />
+    <Content Include="Content\HinhAnh\BKTTahomaS50Black\99.xnb" />
+    <Content Include="Content\HinhAnh\Bui\1.xnb" />
+    <Content Include="Content\HinhAnh\Bui\2.xnb" />
+    <Content Include="Content\HinhAnh\Bui\3.xnb" />
+    <Content Include="Content\HinhAnh\Bui\4.xnb" />
+    <Content Include="Content\HinhAnh\Bui\5.xnb" />
+    <Content Include="Content\HinhAnh\Bui\6.xnb" />
+    <Content Include="Content\HinhAnh\Bui\7.xnb" />
+    <Content Include="Content\HinhAnh\ChimBayXa\1.xnb" />
+    <Content Include="Content\HinhAnh\ChimBayXa\2.xnb" />
+    <Content Include="Content\HinhAnh\ChimBayXa\3.xnb" />
+    <Content Include="Content\HinhAnh\ChimBayXa\4.xnb" />
+    <Content Include="Content\HinhAnh\ChimBayXa\5.xnb" />
+    <Content Include="Content\HinhAnh\ChimBayXa\6.xnb" />
+    <Content Include="Content\HinhAnh\ChimBayXa\7.xnb" />
+    <Content Include="Content\HinhAnh\ChimBayXa\8.xnb" />
+    <Content Include="Content\HinhAnh\DauTich.xnb" />
+    <Content Include="Content\HinhAnh\DiemDo.xnb" />
+    <Content Include="Content\HinhAnh\DiemTrang.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\1.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\10.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\11.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\12.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\13.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\14.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\15.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\16.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\17.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\18.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\19.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\2.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\20.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\3.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\4.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\5.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\6.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\7.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\8.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\HangSanXuat\9.xnb" />
+    <Content Include="Content\HinhAnh\GioiThieuHang\NenGioiThieu.xnb" />
+    <Content Include="Content\HinhAnh\HinhAnhChu\CDanhGia\1.xnb" />
+    <Content Include="Content\HinhAnh\HinhAnhChu\CDanhGia\2.xnb" />
+    <Content Include="Content\HinhAnh\HinhAnhChu\CNgonNgu\1.xnb" />
+    <Content Include="Content\HinhAnh\HinhAnhChu\CNgonNgu\2.xnb" />
+    <Content Include="Content\HinhAnh\MatTrang.xnb" />
+    <Content Include="Content\HinhAnh\MatTroi.xnb" />
+    <Content Include="Content\HinhAnh\MayTroi.xnb" />
+    <Content Include="Content\HinhAnh\NenNoiNho.xnb" />
+    <Content Include="Content\HinhAnh\NenNoiTo.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\1.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\10.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\11.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\12.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\13.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\14.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\2.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\3.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\4.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\5.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\6.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\7.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\8.xnb" />
+    <Content Include="Content\HinhAnh\NVCChay\9.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\1.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\10.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\2.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\3.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\4.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\5.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\6.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\7.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\8.xnb" />
+    <Content Include="Content\HinhAnh\NVCNhay\9.xnb" />
+    <Content Include="Content\HinhAnh\SamSet\1.xnb" />
+    <Content Include="Content\HinhAnh\SamSet\2.xnb" />
+    <Content Include="Content\HinhAnh\SamSet\3.xnb" />
+    <Content Include="Content\HinhAnh\SamSet\4.xnb" />
+    <Content Include="Content\HinhAnh\SamSet\5.xnb" />
+    <Content Include="Content\HinhAnh\SamSet\6.xnb" />
+    <Content Include="Content\HinhAnh\SamSet\7.xnb" />
+    <Content Include="Content\HinhAnh\SamSet\8.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\1.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\10.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\11.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\12.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\13.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\14.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\15.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\16.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\17.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\18.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\2.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\3.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\4.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\5.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\6.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\7.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\8.xnb" />
+    <Content Include="Content\HinhAnh\TenTroChoi\9.xnb" />
+    <Content Include="Content\HinhAnh\ThanhAmThanh.xnb" />
+    <Content Include="Content\HinhAnh\ThanhToi.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\1.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\10.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\11.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\12.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\13.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\14.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\15.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\16.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\17.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\18.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\19.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\2.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\20.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\3.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\4.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\5.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\6.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\7.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\8.xnb" />
+    <Content Include="Content\HinhAnh\ThucDon\9.xnb" />
+    <Content Include="Content\HinhAnh\TroAmThanh.xnb" />
+    <Content Include="Content\HinhAnh\TuongGach\1.xnb" />
+    <Content Include="Content\HinhAnh\TuongGach\2.xnb" />
+    <Content Include="Content\HinhAnh\TuongGach\3.xnb" />
+    <Content Include="Content\HinhAnh\TuongGach\4.xnb" />
+    <Content Include="Content\HinhAnh\TuongGach\5.xnb" />
+    <Content Include="Content\HinhAnh\TuongGach\6.xnb" />
+    <Content Include="Content\HinhAnh\TuongGach\7.xnb" />
+    <Content Include="Content\HinhAnh\TuongGach\8.xnb" />
+    <Content Include="Content\HinhAnh\ShareGames\OtherGamesBT.xnb" />
+    <Content Include="Content\HinhAnh\ShareGames\OtherGamesKH.xnb" />
+    <Content Include="Content\HinhAnh\ShareGames\ShareBT.xnb" />
+    <Content Include="Content\HinhAnh\ShareGames\ShareKH.xnb" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.vi-VN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="box2d" Condition=" $(Platform) == 'x86' ">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\x86\box2d.dll</HintPath>
+    </Reference>
+    <Reference Include="box2d" Condition=" $(Platform) != 'x86'">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\box2d.dll</HintPath>
+    </Reference>
+    <Reference Include="cocos2d-xna" Condition=" $(Platform) == 'x86' ">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\x86\cocos2d-xna.dll</HintPath>
+    </Reference>
+    <Reference Include="cocos2d-xna" Condition=" $(Platform) != 'x86'">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\cocos2d-xna.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleAds">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\GoogleAds.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib" Condition=" $(Platform) == 'x86' ">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\x86\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib" Condition=" $(Platform) != 'x86'">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework" Condition=" $(Platform) == 'x86' ">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\x86\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework" Condition=" $(Platform) != 'x86'">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="vservWindowsPhone">
+      <HintPath>..\packages\Cocos2D-XNA.WindowsPhone8.1.3.0.2\lib\WindowsPhone8\ARM\vservWindowsPhone.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png" />
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png" />
+    <Content Include="Assets\Tiles\IconicTileSmall.png" />
+    <Content Include="Images\back.png" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\next.png" />
+    <Content Include="Images\ref.png" />
+    <Content Include="Images\stop.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <Target Name="MonoGame_RemoveXnaAssemblies" AfterTargets="ImplicitlyExpandTargetFramework">
+    <Message Text="MonoGame - Removing XNA Assembly references!" Importance="normal" />
+    <ItemGroup>
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.GamerServices.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.GamerServicesExtensions.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.Input.Touch.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.MediaLibraryExtensions.dll'" />
+    </ItemGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
